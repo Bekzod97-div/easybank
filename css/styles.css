@@ -90,6 +90,7 @@ body {
 
   /* Main Btn */
   .main-btn {
+    display: inline-block;
     padding: 8px 35px;
     background-image: linear-gradient(135deg, #33D35E 0%, #2AB6D9 99.58%);
     border-radius: 22px;
@@ -107,8 +108,22 @@ body {
     opacity: 0.4;
   }
 
+  /* Title */
+  .title {
+    font-weight: 100;
+    color: var(--text-dark);
+  }
+
+  /* Text */
+  .text {
+    font-size: 18px;
+    line-height: 28px;
+    letter-spacing: -0.28px;
+  }
+
   /* Site Header */
   .site-header {
+    z-index: 10;
     background-color: #fff;
     padding-top: 18px;
     padding-bottom: 18px;
@@ -179,4 +194,38 @@ body {
 /* Main content */
 .main-content {
     flex-grow: 1;
+}
+
+/* Hero */
+.hero {
+    width: 100%;
+    max-width: 1305px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: 165px;
+    margin-right: 0;
+    display: flex;
+    height: 100vh;
+    background-image: url(../img/hero-bg.svg);
+    background-repeat: no-repeat;
+    background-position: top -235px right -525px;
+}
+
+.hero__content--wrapper {
+    width: 100%;
+    max-width: 447px;
+    margin-top: 133px;
+    margin-bottom: 170px;
+    margin-right: 28px;
+}
+
+.hero__content-title {
+    margin-bottom: 24px;
+    font-size: 56px;
+    line-height: 64px;
+    letter-spacing: -1px;
+}
+
+.hero__content-text {
+    margin-bottom: 36px;
 }
