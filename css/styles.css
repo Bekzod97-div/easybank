@@ -305,3 +305,64 @@ body {
   letter-spacing: -0.25px;
   line-height: 26px;
 }
+
+/* Articles */
+.articles {
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+
+.articles__title {
+  margin-bottom: 40px;
+}
+
+.articles__item {
+  flex-grow: 1;
+  border-radius: 5px;
+}
+
+.article__img {
+  display: flex;
+  padding-right: 0;
+  margin-right: 0;
+  width: 255px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 5px 5px 0 0;
+}
+
+.articles__content {
+  box-sizing: border-box;
+  width: 255px;
+  background-color: #fff;
+  padding: 24px;
+  border-radius: 0 0 5px 5px;
+}
+
+.author {
+  font-size: 10px;
+  line-height: 18px;
+  letter-spacing: -0.16px;
+}
+
+.articles__content-link {
+  display: block;
+  text-decoration: none;
+  color: var(--text-color);
+  font-size: 16px;
+  line-height: 20px;
+  letter-spacing: -0.29px;
+  margin-bottom: 8px;
+  margin-top: 8px;
+  transition: color 0.3s ease;
+}
+
+.articles__content-link:hover {
+  color: var(--color-green);
+}
+
+.info__content-text {
+  font-size: 13px;
+  line-height: 18px;
+  letter-spacing: -0.2px;
+}
