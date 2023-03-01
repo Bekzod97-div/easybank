@@ -1,5 +1,46 @@
-html {
+/* Fonts */
+@font-face {
+    font-family: "Public Sans";
+    src: url(../fonts/PublicSans-Thin.woff2) format("woff2"),
+        url(../fonts/PublicSans-Thin.woff) format("woff");
+    font-weight: 100;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Public Sans";
+    src: url(../fonts/PublicSans-Medium.woff2) format("woff2"),
+        url(../fonts/PublicSans-Medium.woff) format("woff");
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Public Sans";
+    src: url(../fonts/PublicSans-Regular.woff2) format("woff2"),
+        url(../fonts/PublicSans-Regular.woff) format("woff");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* Root */
+:root {
+    --color-green: #30C88F;
+    --text-color: #9597A5;
+    --text-dark: #2D314D;
+}
+
+/* Global styles */
+* {
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
     height: 100%;
     scroll-behavior: smooth;
 }
@@ -16,26 +57,124 @@ body {
     height: 100%;
     padding: 0;
     margin: 0;
+    font-weight: 400;
     font-size: 16px;
-    font-family: "Arial", sans-serif;
-    line-height: 1.5;
-    background-color: #fff;
-    color: #222;
-}
-
-img {
-    max-width: 100%;
-    height: auto;
+    font-family: "Public Sans", "Arial", sans-serif;
+    background-color: #f2f2f2;
+    color: var(--text-color);
 }
 
 .container {
     width: 100%;
-    max-width: 1200px;
-    padding-left: 50px;
-    padding-right: 50px;
+    max-width: 1150px;
+    padding-left: 20px;
+    padding-right: 20px;
     margin-left: auto;
     margin-right: auto;
 }
+
+/* Visually hidden */
+/* Visually hidden */
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+  }
+
+  /* Main Btn */
+  .main-btn {
+    padding: 8px 35px;
+    background-image: linear-gradient(135deg, #33D35E 0%, #2AB6D9 99.58%);
+    border-radius: 22px;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 28px;
+    color: #fff;
+    text-decoration: none;
+    white-space: nowrap;
+  }
+  .main-btn:hover {
+    opacity: 0.6;
+  }
+  .main-btn:active {
+    opacity: 0.4;
+  }
+
+  /* Site Header */
+  .site-header {
+    background-color: #fff;
+    padding-top: 18px;
+    padding-bottom: 18px;
+  }
+
+  .site-header__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .logo {
+    display: flex;
+    width: 140px;
+    height: 20px;
+  }
+
+  /* Sitenav */
+  .sitenav__list {
+      display: flex;
+      align-items: center;
+      padding: 0;
+      margin: 0;
+      list-style: none;
+  }
+
+  .sitenav__item {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .sitenav__item:not(:last-child) {
+      margin-right: 30px;
+  }
+
+  .hover-line {
+    display: none;
+    position: absolute;
+    top: 43px;
+    width: 100%;
+    height: 4px;
+    background-image: linear-gradient(135deg, #33D35E 0%, #2AB6D9 99.58%);
+  }
+
+  .sitenav__link {
+      display: block;
+      text-decoration: none;
+      font-size: 14px;
+      line-height: 16px;
+      letter-spacing: -0.11px;
+      color: var(--text-color);
+      transition: 0.4s;
+  }
+
+  .sitenav__link:hover {
+    color: var(--text-dark);
+  }
+  .sitenav__link:hover ~ .hover-line {
+    display: block;
+  }
+
+  .sitenav__link:active {
+    opacity: 0.6;
+  }
+
 
 /* Main content */
 .main-content {
